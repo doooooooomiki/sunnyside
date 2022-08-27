@@ -1,0 +1,26 @@
+{
+  "name": "sunnyside",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domKirs/sunnyside.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domKirs/sunnyside/issues"
+  },
+  "homepage": "https://github.com/domKirs/sunnyside#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "alpinejs": "^3.10.3"
+  }
+}
