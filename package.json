@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,11 @@
     "url": "https://github.com/domKirs/sunnyside/issues"
   },
   "homepage": "https://github.com/domKirs/sunnyside#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
-  },
   "dependencies": {
     "alpinejs": "^3.10.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.4",
+    "@11ty/eleventy-plugin-vite": "^1.0.0"
   }
 }
