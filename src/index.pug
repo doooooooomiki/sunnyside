@@ -1,6 +1,6 @@
 extends ./_includes/base.pug
 
 block main
-  div( x-data="{ count: 0 }" ) 
-    button( x-on:click="count++" ) Increment
+  div( x-data="counter" ) 
+    button( @click="increment" ) Increment
     span( x-text="count" ) 
