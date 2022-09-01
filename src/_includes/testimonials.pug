@@ -1,0 +1,18 @@
+- var data = testimonials.data
+
+section.testimonials(x-data="testimonials") 
+  h2= data.h2
+  ul
+    template(x-for="client in clients.onStage") 
+      li
+        .testimonial
+          figure 
+            img(:src="client.avatar")
+          .testimonial-message
+            p(x-text="client.message")
+          .testimonial-info
+            h3
+              span(x-text="client.name")
+              small(x-text="client.designation")
+  form(@submit.prevent="more")
+    button(:disabled="buttonDisabled")= data.button

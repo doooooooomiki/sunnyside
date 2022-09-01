@@ -1,6 +1,20 @@
-extends ./_includes/base.pug
+doctype html
+html(lang='en')
 
-block main
-  div( x-data="counter" ) 
-    button( @click="increment" ) Increment
-    span( x-text="count" ) 
+  head
+    include _includes/meta.pug
+    include _includes/script.pug
+
+  body
+
+    header
+      include _includes/navigation.pug
+
+    main
+      include _includes/hero.pug
+      include _includes/about.pug
+      include _includes/services.pug
+      include _includes/testimonials.pug
+      include _includes/showcase.pug
+
+    footer

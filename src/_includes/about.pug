@@ -1,0 +1,17 @@
+- var data = about.data
+
+section.about
+  each textblock, index in data 
+    article
+      if index % 2 === 1
+        figure
+          img(src=textblock.img.src)
+      div
+        h2= textblock.h2
+        each p in textblock.p
+          p= p
+        a(href=textblock.a.url)= textblock.a.text
+    
+      if index % 2 === 0
+        figure 
+          img(src=textblock.img.src)
