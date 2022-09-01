@@ -1,6 +1,6 @@
 # Dependency directories
 node_modules/
 
-dis/
+_site/
 
 .DS_Store
