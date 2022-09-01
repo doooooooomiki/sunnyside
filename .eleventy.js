@@ -3,14 +3,12 @@ const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 
 module.exports = function(eleventyConfig) {
 
-	eleventyConfig.addPassthroughCopy('src/assets/css');
-	eleventyConfig.addPassthroughCopy('src/assets/js');
-
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     tempFolderName: ".11ty-vite", // Default name of the temp folder
 
     // Defaults are shown:
     viteOptions: {
+      base: './',
       clearScreen: false,
       server: {
         mode: "development",
@@ -22,6 +20,11 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  eleventyConfig.addPassthroughCopy('src/assets/css');
+	eleventyConfig.addPassthroughCopy('src/assets/img');
+	eleventyConfig.addPassthroughCopy('src/assets/js');
+	eleventyConfig.addPassthroughCopy('src/assets/json');
+
 
   // Return your Object options:
   return {
@@ -31,10 +34,11 @@ module.exports = function(eleventyConfig) {
       "pug",
       "md",
       "11ty.js",
+      "liquid",
     ],
     dir: {
       input: "src",
-      output: "dist"
+      output: "_site"
     }
   }
 };
